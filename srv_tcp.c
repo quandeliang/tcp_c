@@ -293,8 +293,8 @@ int _send_data_to_php(unsigned char *databaseID,unsigned long id,unsigned char *
 	    json_object_new_string(cmd));
       json_object_object_add(json,to_php_databaseid,
 	    json_object_new_string(databaseID));
-      json_object_object_add(json,to_php_hardware_id,
-	    json_object_new_ulong(id));
+      /*json_object_object_add(json,to_php_hardware_id,
+	    json_object_new_ulong(id));*/
       json_object_object_add(json,to_php_hardware_value,
 	    json_object_new_string(value));
       strcpy((char *)_buf.text,(char *)json_object_to_json_string(json));
